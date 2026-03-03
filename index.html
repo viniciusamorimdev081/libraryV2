@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <div class="container">
+        <!-- LOGIN -->
+        <div id="loginForm" class="form">
+            <h2>Login</h2>
+            <label for="email">Email:</label>
+            <input type="text" id="login-email"placeholder="Email@" required>
+            <label for="senha">Senha:</label>
+            <input type="password" id="login-senha" placeholder="Password" required>
+            <button onclick="login()">LOGIN</button>
+            <div class="toggle-link" onclick="showRegister()">Não tem conta? Cadastre-se</div>
+            <div class="toggle-link" onclick="showForgot()">Esqueceu a senha?</div>
+        </div>
+
+        <!-- CADASTRO -->
+        <div id="registerForm" class="form hidden">
+            <h2>Cadastro</h2>
+            <input type="text" id="register-nome" placeholder="Nome completo" required>
+            <input type="email" id="register-email" placeholder="Email" required>
+            <input type="password" id="register-senha" placeholder="Senha" required>
+            <button onclick="cadastrar()">CADASTRAR</button>
+            <div class="toggle-link" onclick="showLogin()">Já tem conta? Faça login</div>
+            <div class="toggle-link" onclick="showForgot()">Esqueceu a senha?</div>
+        </div>
+
+        <!-- RECUPERAR SENHA (duas etapas) -->
+        <div id="forgotForm" class="form hidden">
+            <h2>Recuperar senha</h2>
+            <div id="etapa1">
+                <p>Digite seu e-mail para verificar a conta.</p>
+                <input type="email" id="forgot-email" placeholder="Seu e-mail" required>
+                <button onclick="verificarEmail()">VERIFICAR</button>
+            </div>
+            <div id="etapa2">
+                <p>Defina uma nova senha para <span id="email-exibido"></span></p>
+                <input type="password" id="nova-senha" placeholder="Nova senha" required>
+                <input type="password" id="confirma-senha" placeholder="Confirme a senha" required>
+                <button onclick="redefinirSenha()">REDEFINIR</button>
+            </div>
+            <div class="toggle-link" onclick="showLogin()">Voltar ao login</div>
+            <div class="toggle-link" onclick="showRegister()">Criar nova conta</div>
+        </div>
+    </div>
+
+    <script src="js/login.js"></script>
+</body>
+</html>

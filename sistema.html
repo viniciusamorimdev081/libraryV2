@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de biblioteca</title>
+    <!--IMPORTAÇÃO DO ESTILO CSS DO SISTEMA-->
+    <link rel="stylesheet" href="css/style.css">
+    <!--IMPORTAÇÃO DA BIBLIOTECA DE ICONES BOOTSTRAP-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!--ICON THE TITLE-->
+    <link rel="icon" href="img/logo.png">
+</head>
+<body>
+    <!--DIV QUE VAI SEGURAR TODO CONTEUDO PRINCIPAL DO SISTEMA-->
+    <div class="container-principal">
+        <!--ESTRUTURA DO MENU LATERAL DA VERSÃO DESKTOP-->
+        <aside id="menu-lateral-desktop">
+            <div id="logo-menu-principal"><img src="img/logo.png" alt="" width="150"></div>
+            <nav>
+                <ul>
+                    <li id="menuDashboard" class="menu-selecionado"><i class="bi bi-speedometer2"></i>Dashboard</li>
+                    <li id="menuLivros"><i class="bi bi-book-half"></i>Livros</li>
+                    <li id="menuClientes"><i class="bi bi-people-fill"></i>Clientes</li>
+                    <li id="menuConfiguracao"><i class="bi bi-gear-fill"></i>Configurações</li>
+                    <li id="menuSair"><i class="bi bi-box-arrow-left"></i>Sair</li>
+                </ul>
+            </nav>
+        </aside>
+        <!--TELA CORRESPONDENTE A CADA MENU DO SISTEMA-->
+        <main>
+            <!--TELA DE DASHBOARS-->
+            <section id="telaDashboard">
+                Dashboard
+            </section>
+            <!--TELA DE CADASTRO E LISTA DE LIVROS-->
+            <section id="telaLivros" class="hidden">
+                Livros
+            </section>
+            <!--TELA DE CADASTRO E LISTA DE CLIENTES-->
+            <section id="telaClientes" class="hidden">
+                Clientes
+            </section>
+            <!--TELA DE CONFIGURAÇÃO-->
+            <section id="telaConfiguracao" class="hidden">
+                Configurações
+            </section>
+        </main>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--LOGICA DE FUNCIONABILIDADE GERAL DO SISTEMA-->
+    <script src="js/main.js"></script>
+</body>
+</html>

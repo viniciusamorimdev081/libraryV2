@@ -1,0 +1,99 @@
+/*DECLARAÇÃO DE VARIAVEL PARA A PELETA DE CORES TEMPORARIA*/
+:root {
+  /* --- Cores Primárias (Roxo) --- */
+  --primary-color: #03263f;        /* Roxo Indigo (Principal) */
+  --primary-hover: #08548a;        /* Roxo um pouco mais escuro para botões */
+  --primary-light: #1771b1;        /* Roxo bem clarinho para fundos de cards ativos */
+  /* --- Secundária (Verde Água para Contraste) --- */
+  --secondary-color: #2bcacb; 
+  --secondary-hover: #209292;
+  --secondary-light: #54f3f3; /* Ótimo para fundo de badges */
+  
+  /* --- Escala de Cinzas (Fundos e Textos) --- */
+  --bg-app: #f8fafc;               /* Cor de fundo da tela (quase branco) */
+  --bg-sidebar: #ffffff;           /* Fundo do menu lateral */
+  --text-main: #1e293b;            /* Texto principal (quase preto) */
+  --text-muted: #64748b;           /* Texto secundário/legendas (cinza) */
+
+  
+  /* --- Cores de Status --- */
+  --success: #22c55e;              /* Verde para indicadores positivos */
+  --danger: #ef4444;               /* Vermelho para alertas/erros */
+  --warning: #f59e0b;              /* Amarelo para atenção */
+
+  /* --- Bordas e Sombras --- */
+  --border-color: #e2e8f0;         /* Cor suave para divisórias e bordas */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
+}
+/*ESTILOS GERAIS*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    height: 100vh;
+    background: var(--bg-app);
+}
+.hidden{
+    display: none;
+}
+/*ESTILO MENU LATERAL DESKTOP*/
+#menu-lateral-desktop{
+    position: fixed;
+    height: 100vh;
+    width: 300px;
+    padding: 50px 30px;
+    background: var(--primary-color);
+    box-shadow: 0 0 15px black;
+}
+#menu-lateral-desktop #logo-menu-principal{
+    text-align: center;
+}
+#menu-lateral-desktop #logo-menu-principal img{
+    border: solid 2px var(--secondary-color);
+    border-radius: 50%;
+    box-shadow: 0 0 15px var(--secondary-color);
+}
+#menu-lateral-desktop nav{
+    margin-top: 50px;
+}
+#menu-lateral-desktop nav ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#menu-lateral-desktop nav ul li{
+    list-style-type: none;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.2s;
+    color: white;
+}
+#menu-lateral-desktop nav ul li:hover{
+    background: linear-gradient(to left, var(--secondary-color), var(--secondary-hover));
+    transform: scale(1.02);
+}
+#menu-lateral-desktop nav ul li i{
+    margin-right: 10px;
+}
+.menu-selecionado{
+    color: white;
+    background: linear-gradient(to left, var(--secondary-color), var(--secondary-hover));
+}
+/*ESTILO DE TELAS DO SISTEMA (MAIN)*/
+main{
+    margin-left: 300px;
+    padding: 50px;
+}
+/*ESTILO TELA DASHBOARD*/
+#telaDashboard{}
+/*ESTILO TELA LIVROS*/
+#telaLivros{}
+/*ESTILO TELA CLIENTES*/
+#telaClientes{}
+/*ESTILO TELA CONFIGURTAÇÃO*/
+#telaConfiguracao{}

@@ -1,0 +1,128 @@
+:root {
+  /* --- Cores Primárias (Roxo) --- */
+  --primary-color: #03263f;        /* Roxo Indigo (Principal) */
+  --primary-hover: #08548a;        /* Roxo um pouco mais escuro para botões */
+  --primary-light: #1771b1;        /* Roxo bem clarinho para fundos de cards ativos */
+  /* --- Secundária (Verde Água para Contraste) --- */
+  --secondary-color: #2bcacb; 
+  --secondary-hover: #209292;
+  --secondary-light: #54f3f3; /* Ótimo para fundo de badges */
+  
+  /* --- Escala de Cinzas (Fundos e Textos) --- */
+  --bg-app: #f8fafc;               /* Cor de fundo da tela (quase branco) */
+  --bg-sidebar: #ffffff;           /* Fundo do menu lateral */
+  --text-main: #1e293b;            /* Texto principal (quase preto) */
+  --text-muted: #64748b;           /* Texto secundário/legendas (cinza) */
+
+  
+  /* --- Cores de Status --- */
+  --success: #22c55e;              /* Verde para indicadores positivos */
+  --danger: #ef4444;               /* Vermelho para alertas/erros */
+  --warning: #f59e0b;              /* Amarelo para atenção */
+
+  /* --- Bordas e Sombras --- */
+  --border-color: #e2e8f0;         /* Cor suave para divisórias e bordas */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: linear-gradient(to left, var(--secondary-color), var(--secondary-hover));   /* usando variável */
+    border-radius: 8px;
+    box-shadow: 0 0 10px var(--secondary-color);
+    width: 350px;
+    padding: 60px 15px 20px 15px;
+    color: white;
+    min-height: 450px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+h2 {
+    text-align: left;
+    margin: 0;
+}
+
+label, p {
+    color: white;
+    font-size: 16px;
+    text-align: left;
+    margin: 0;
+}
+
+input {
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    font-size: 16px;
+    background-color: var(--bg-app);       /* usando variável */
+    color: var(--primary-color);
+    width: 100%;
+}
+
+input::placeholder {
+    color: var(--input-placeholder);         /* usando variável */
+}
+
+button {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.2s;
+    width: 100%;
+}
+
+button:hover {
+    background: var(--primary-hover);   
+}
+
+.toggle-link {
+    text-align: left;
+    cursor: pointer;
+    color: var(--link-color);                /* usando variável */
+    text-decoration: underline;
+    font-size: 14px;
+    margin: 0;
+}
+
+.toggle-link:hover {
+    color: var(--link-hover);                 /* usando variável */
+}
+
+/* Etapas da recuperação de senha */
+#etapa1, #etapa2 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#etapa2 {
+    display: none;
+}
