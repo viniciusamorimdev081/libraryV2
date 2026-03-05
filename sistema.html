@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/style.css">
     <!--IMPORTAÇÃO DA BIBLIOTECA DE ICONES BOOTSTRAP-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!--IMPORTAÇÃO DA BIBLIOTECA DE GRAFICOS CHART.JS-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!--ICON THE TITLE-->
     <link rel="icon" href="img/logo.png">
 </head>
@@ -31,7 +33,88 @@
         <main>
             <!--TELA DE DASHBOARS-->
             <section id="telaDashboard">
-                Dashboard
+                <!--PARTE SUPERIOR DO DASHBOARD (TITULO)-->
+                <div class="top-dashboard">
+                    <div>Library | Gerenciamento de Biblioteca</div>
+                    <div class="btns-top-dashboard">
+                        <button>+ Novo Livro</button>
+                        <button>+ Novo Cliente</button>
+                        <button onclick="">Atualizar</button>
+                    </div>
+                    
+                </div>
+                <!--DIV DE CONTAINER DOS CARDS DA PRIMEIRA LINHA-->
+                <div class="grid-cards-dashboard">
+                    <!-------CARD------->
+                    <div class="card-dashboard">
+                        <div class="icon-card-dashboard">
+                            <i class="bi bi-journal-text"></i>
+                        </div>
+
+                        <div class="info-card-dashboard">
+                            <span class="title-info-card">Livros cadastrado</span>
+                            <span class="number-card">0</span>
+                        </div>
+                    </div>
+                    <!-------CARD------->
+                    <div class="card-dashboard">
+                        <div class="icon-card-dashboard">
+                            <i class="bi bi-person-check"></i>
+                        </div>
+
+                        <div class="info-card-dashboard">
+                            <span class="title-info-card">Livros alugados</span>
+                            <span class="number-card">0</span>
+                        </div>
+                    </div>
+                    <!-------CARD------->
+                    <div class="card-dashboard">
+                        <div class="icon-card-dashboard">
+                            <i class="bi bi-box-seam"></i>
+                        </div>
+
+                        <div class="info-card-dashboard">
+                            <span class="title-info-card">Livros disponiveis</span>
+                            <span class="number-card">0</span>
+                        </div>
+                    </div>
+                    <!-------CARD------->
+                    <div class="card-dashboard">
+                        <div class="icon-card-dashboard">
+                            <i class="bi bi-person-vcard"></i>
+                        </div>
+
+                        <div class="info-card-dashboard">
+                            <span class="title-info-card">Clientes cadastrado</span>
+                            <span class="number-card">0</span>
+                        </div>
+                    </div>
+                    <!-------CARD------->
+                    <div class="card-dashboard">
+                        <div class="icon-card-dashboard">
+                            <i class="bi bi-person-exclamation"></i>
+                        </div>
+
+                        <div class="info-card-dashboard">
+                            <span class="title-info-card">Clientes pedentes</span>
+                            <span class="number-card">0</span>
+                        </div>
+                    </div>
+                </div>
+                <!--DIV DE CONTAINER DOS GRAFICOS-->
+                <div class="container-graficos">
+                    <div id="grafico1">
+                        <span>Generos Disponiveis</span>
+                        <canvas id="grafico-generos-disponiveis"></canvas>
+                    </div>
+
+                    <div id="grafico2">
+                        <span>Generos Alugados</span>
+                        <canvas id="grafico-generos-alugados"></canvas>
+                    </div>
+                </div>
+                
+                
             </section>
             <!--TELA DE CADASTRO E LISTA DE LIVROS-->
             <section id="telaLivros" class="hidden">
@@ -66,5 +149,9 @@
 
     <!--LOGICA DE FUNCIONABILIDADE GERAL DO SISTEMA-->
     <script src="js/main.js"></script>
+    <!--SCRIPT DO GRAFICO GENEROS DISPONIVEIS-->
+    <script src="js/generosDisponiveis.js"></script>
+    <!--SCRIPT DO GRAFICO GENEROS ALUGADOS-->
+    <script src="js/generosAlugados.js"></script>
 </body>
 </html>
