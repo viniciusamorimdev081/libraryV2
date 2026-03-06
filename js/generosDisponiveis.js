@@ -5,7 +5,7 @@ const ctx = document.getElementById('grafico-generos-disponiveis');
     data: {
       labels: ['Romance', 'Misterio', 'Comedia', 'Aventura', 'Ficção'],
       datasets: [{
-        label: 'Generos disponiveis',
+        label: 'Generos',
         data: [12, 19, 3, 5, 2],
         borderWidth: 1
       }]
@@ -18,3 +18,4 @@ const ctx = document.getElementById('grafico-generos-disponiveis');
       }
     }
   });
+

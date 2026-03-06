@@ -115,10 +115,10 @@ main{
     display: flex;
     align-items: center;
     gap: 5px;
-    border: var(--secondary-color) 1px solid;
     padding: 10px;
     border-radius: 5px;
     min-width: 180px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .icon-card-dashboard i{
@@ -151,19 +151,18 @@ main{
     display: grid;
     grid-template-columns: 70% 30%;
     gap: 20px;
-
 }
 
 .container-graficos #grafico1{
-    border: var(--secondary-color) solid 1px;
     padding: 15px;
     border-radius: 10px;
-    
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+
 .container-graficos #grafico2{
-    border: solid 1px var(--secondary-color);
     padding: 15px;
     border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .container-graficos #grafico2 #grafico-generos-alugados{
     width: 100% !important;

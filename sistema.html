@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,9 +11,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <!--IMPORTAÇÃO DA BIBLIOTECA DE GRAFICOS CHART.JS-->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!--IMPORTAÇÃO BIBLIOTECA AOSCSS ANIMAÇOES-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!--ICON THE TITLE-->
     <link rel="icon" href="img/logo.png">
 </head>
+
 <body>
     <!--DIV QUE VAI SEGURAR TODO CONTEUDO PRINCIPAL DO SISTEMA-->
     <div class="container-principal">
@@ -34,17 +38,17 @@
             <!--TELA DE DASHBOARS-->
             <section id="telaDashboard">
                 <!--PARTE SUPERIOR DO DASHBOARD (TITULO)-->
-                <div class="top-dashboard">
+                <div  data-aos="fade-up" class="top-dashboard">
                     <div>Library | Gerenciamento de Biblioteca</div>
                     <div class="btns-top-dashboard">
                         <button>+ Novo Livro</button>
                         <button>+ Novo Cliente</button>
-                        <button onclick="">Atualizar</button>
+                        <button onclick="location.reload(true)">Atualizar</button>
                     </div>
-                    
+
                 </div>
                 <!--DIV DE CONTAINER DOS CARDS DA PRIMEIRA LINHA-->
-                <div class="grid-cards-dashboard">
+                <div  data-aos="fade-up" class="grid-cards-dashboard">
                     <!-------CARD------->
                     <div class="card-dashboard">
                         <div class="icon-card-dashboard">
@@ -102,7 +106,7 @@
                     </div>
                 </div>
                 <!--DIV DE CONTAINER DOS GRAFICOS-->
-                <div class="container-graficos">
+                <div data-aos="fade-up" class="container-graficos">
                     <div id="grafico1">
                         <span>Generos Disponiveis</span>
                         <canvas id="grafico-generos-disponiveis"></canvas>
@@ -113,12 +117,14 @@
                         <canvas id="grafico-generos-alugados"></canvas>
                     </div>
                 </div>
-                
-                
+
+
             </section>
             <!--TELA DE CADASTRO E LISTA DE LIVROS-->
             <section id="telaLivros" class="hidden">
                 Livros
+                <input type="text" placeholder="pesquisar livro">
+                <button>pesquisar</button>
             </section>
             <!--TELA DE CADASTRO E LISTA DE CLIENTES-->
             <section id="telaClientes" class="hidden">
@@ -153,5 +159,11 @@
     <script src="js/generosDisponiveis.js"></script>
     <!--SCRIPT DO GRAFICO GENEROS ALUGADOS-->
     <script src="js/generosAlugados.js"></script>
+    <!--IMPORTAÇÃO AOS CSS ANIMAÇÃO DE ENTRADA CSS-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
+
 </html>
